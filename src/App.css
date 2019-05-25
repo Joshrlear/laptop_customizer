@@ -74,7 +74,7 @@ main {
   list-style: none;
 }
 
-.feature__option:not(.feature__selected) {
+.feature__option {
   cursor: pointer;
 }
 
@@ -90,5 +90,3 @@ main {
 .feature__selected {
   background: #DEDEDE;
 }
-
-
