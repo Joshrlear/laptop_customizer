@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import Heading from './Heading/Heading'
+import MainForm from './MainForm/MainFom'
+import MainSummary from './MainSummary/MainSummary'
 import './App.css';
-import Features from './Features/Features';
-import Summary from './Summary/Summary';
-import Total from './Summary/Total/Total';
 
 class App extends Component {
   constructor(props){
@@ -37,29 +37,27 @@ class App extends Component {
     });
   }
 
-  render() {  
-   
+  render() {
+            
+
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing</h1>
-          <h3>Laptops</h3>
-          <h5>Customize your laptop</h5>  
-        </header>      
+        <Heading />
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <Features
-            updateFeature={this.updateFeature}
-            features={this.props.features}
-            selected={this.state.selected} />
+            <MainForm
+              features={this.props.features}
+              selected={this.state.selected}
+              updateFeature={this.updateFeature}
+            />
           </section>
           <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
-            <Summary
-              selected={this.state.selected} />
-            <Total
-              selected={this.state.selected} />
+            <MainSummary
+              selected={this.state.selected}
+            />
+            
           </section>
         </main>
       </div>
@@ -67,4 +65,4 @@ class App extends Component {
   }
 }
 
-export default App;  
+export default App;
